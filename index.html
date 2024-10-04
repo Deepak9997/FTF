@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">FeelTheFood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.6.82/pdf_viewer.min.css" integrity="sha512-682NKs3jUDtUlMV5W0Lnw0JoP0VvlS+6ruz0GEFzLZX9OyXw/StyvVV7sEM7Jf96OjoQqWUly3Sm7XvemWfTIA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="main">
+    <div class="login-container" id="login-container">
+      <h2>Login</h2>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+      </div>
+      <div class="input-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="userphone" placeholder="+91 999*******">
+      </div>
+      <div class="input-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="House no.,Buliding,Landmark,Nearby,city">
+      </div>
+      <button class="submit-btn" id="submit-btn" onclick="login()">Login</button>
+      <p>Its A Demo WEBSITE</p>
+     <!-- add this div to display values -->
+    </div>
+    
+
+
+    <div class="box1" id="box1">
+        <h1>Desserts</h1>
+        <div class="box">
+          <div class="bx">
+            <div class="imgb">
+                <img src="assets/images/image-waffle-desktop.jpg" alt=""> 
+            </div>
+            <div class="info"> 
+              <p>Waffe</p>
+              <h6>Waffe with Berries</h6>
+              <h5>$6.50</h5> 
+            </div>
+            <div class="add" id="add" onclick="added()"> 
+              <img id="cartimg" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde">Add</h6>
+            </div>
+          </div>
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-creme-brulee-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Creme Brutee</p>
+              <h6>Vanilla Creme Brulee</h6>
+              <h5>$6.50</h5>
+            </div>
+            <div class="add" id="add1" onclick="added1()">
+              <img id="cartimg1" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde1">Add</h6>
+            </div>
+          </div>
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-macaron-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Macaron</p>
+              <h6>Macaron Mix of Five</h6>
+              <h5>$5.50</h5>
+            </div>
+            <div class="add" id="add2" onclick="added2()">
+              <img id="cartimg2" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde2">Add</h6>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-tiramisu-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Tiramisu</p>
+              <h6>Classic Tramisu</h6>
+              <h5>$3.50</h5>
+            </div>
+            <div class="add" id="add3" onclick="added3()">
+              <img id="cartimg3" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde3">Add</h6> 
+            </div>
+          </div>
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-baklava-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Baklava</p>
+              <h6>PistachioBaklava</h6>
+              <h5>$7.50</h5>
+            </div>
+            <div class="add" id="add4" onclick="added4()">
+              <img id="cartimg4" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde4">Add</h6> 
+            </div>
+          </div>
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-meringue-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Pie</p>
+              <h6>Lemon Meringue Pie</h6>
+              <h5>$8.50</h5>
+            </div>
+            <div class="add" id="add5" onclick="added5()">
+              <img id="cartimg5" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde5">Add</h6> 
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="bx">
+            <div class="imgb">
+                <img src="assets/images/image-cake-desktop.jpg" alt=""> 
+            </div>
+            <div class="info"> 
+              <p>Cake</p>
+              <h6>Red Velvet Cake</h6>
+              <h5>$4.50</h5> 
+            </div>
+            <div class="add" id="add6" onclick="added6()"> 
+              <img id="cartimg6" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde6" >Add</h6>
+            </div>
+          </div>
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-creme-brulee-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Brownie</p>
+              <h6>Salted Caramel Brownie</h6>
+              <h5>$4.50</h5>
+            </div>
+            <div class="add" id="add7" onclick="added7()">
+              <img id="cartimg7" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde7">Add </h6> 
+            </div>
+          </div>
+          <div class="bx">
+              <div class="imgb">
+                <img src="assets/images/image-panna-cotta-desktop.jpg" alt=""> 
+              </div>
+            <div class="info"> 
+              <p>Panna cotta</p>
+              <h6>Vanilla Panna Cotta</h6>
+              <h5>$6.50</h5>
+            </div>
+            <div class="add" id="add8" onclick="added8()">
+              <img id="cartimg8" src="assets/images/icon-add-to-cart.svg" alt=""><h6 class="adde" id="adde8">Add</h6> 
+            </div>
+          </div>
+        </div>
+
+        <div class="cartnotification" id="cartinfo">
+          <div class="popupdetail" id="popupdetail">
+            <div class="images"><img src="assets/images/icon-add-to-cart.svg" alt=""></div>
+            <div class="popupinfo" id="popupinfo">
+              <h6 class="name" id="name"><span id="cartquent" > </span> item</h6>
+              <h6>View more</p>
+            </div>
+          </div>
+          <button id="cartbutton">View Cart</button>
+        </div>
+    </div>
+    <div class="box2" id="box2">
+
+      <h2>Your Cart <h1 id="head"></h1></h2>
+      <div class="carts" id="carts">
+
+        <div class="cart" id="cart">
+          <div class="text" id="txt">
+            <h6 id="h">Waffe with Berries</h6>
+            <div class="bt">
+              <div class="butt" id="butt" onclick="decreament()" >-</div>
+              <p class="pa" id="par"></p>
+              <div class="but" id="but" onclick="increament()">+</div>
+              <p class="para" id="para">6.50</p>
+              <p class="paras" id="pr"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove" onclick="remov()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart1">
+          <div class="text">
+            <h6 id="h1">Vanilla Creme Brulee</h6>
+            <div class="bt">
+              <div class="butt" id="butt1" onclick="decreament1()">-</div>
+              <p class="pa" id="par1"></p>
+              <div class="but" id="but1" onclick="increament1()">+</div>
+              <p class="para" id="para1">6.50</p>
+              <p class="paras" id="pr1"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove1" onclick="remov1()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart2">
+          <div class="text">
+            <h6 id="h2">Macaron Mix of Five</h6>
+            <div class="bt">
+              <div class="butt" id="butt2" onclick="decreament2()">-</div>
+              <p class="pa" id="par2"></p>
+              <div class="but" id="but2" onclick="increament2()">+</div>
+              <p class="para" id="para2">5.50</p>
+              <p class="paras" id="pr2"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove2" onclick="remov2()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart3">
+          <div class="text">
+            <h6 id="h3">Classic Tramisu</h6>
+            <div class="bt">
+              <div class="butt" id="butt3" onclick="decreament3()">-</div>
+              <p class="pa" id="par3"></p>
+              <div class="but" id="but3" onclick="increament3()">+</div>
+              <p class="para" id="para3">3.50</p>
+              <p class="paras" id="pr3"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove3" onclick="remov3()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart4">
+          <div class="text">
+            <h6 id="h4">PistachioBaklava</h6>
+            <div class="bt">
+              <div class="butt"id="butt4" onclick="decreament4()">-</div>
+              <p class="pa" id="par4"></p>
+              <div class="but" id="but4" onclick="increament4()">+</div>
+              <p class="para" id="para4">7.50</p>
+              <p class="paras" id="pr4"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove4" onclick="remov4()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart5">
+          <div class="text">
+            <h6 id="h5">Lemon Meringue Pie</h6>
+            <div class="bt">
+              <div class="butt"id="butt5" onclick="decreament5()">-</div>
+              <p class="pa" id="par5"></p>
+              <div class="but"id="but5" onclick="increament5()">+</div>
+              <p class="para" id="para5">8.50</p>
+              <p class="paras" id="pr5"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove5" onclick="remov5()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart6">
+          <div class="text">
+            <h6 id="h6">Red Velvet Cake</h6>
+            <div class="bt">
+              <div class="butt" id="butt6" onclick="decreament6()">-</div>
+              <p class="pa" id="par6"></p>
+              <div class="but" id="but6" onclick="increament6()">+</div>
+              <p class="para" id="para6">4.50</p>
+              <p class="paras" id="pr6"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove6" onclick="remov6()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart7">
+          <div class="text">
+            <h6 id="h7">Salted Caramel Brownie</h6>
+            <div class="bt">
+              <div class="butt" id="butt7" onclick="decreament7()">-</div>
+              <p class="pa" id="par7"></p>
+              <div class="but" id="but7" onclick="increament7()">+</div>
+              <p class="para" id="para7">4.50</p>
+              <p class="paras" id="pr7"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove7" onclick="remov7()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+        <div class="cart" id="cart8"> 
+          <div class="text">
+            <h6 id="h8">Vanilla Panna Cotta</h6>
+            <div class="bt">
+              <div class="butt" id="butt8" onclick="decreament8()">-</div>
+              <p class="pa" id="par8"></p>
+              <div class="but" id="but8" onclick="increament8()">+</div>
+              <p class="para" id="para8">6.50</p>
+              <p class="paras" id="pr8"></p>
+            </div>
+          </div>
+          <img class="remove" id="remove8" onclick="remov8()" src="assets/images/icons8-remove.svg" alt="">
+        </div>
+      </div>
+
+      <div class="tt">
+        <div class="total">
+            <div class="ot">
+                <h4>Order Total</h4>
+                <h4 id="t">$0</h4>
+            </div>
+            <div class="summery"><i class="fa fa-solid fa-lock"></i> <p>This is a carbon-neutral delivery</p></div>
+        </div>
+        <div class="back" id="back" onclick="back()"><i class="fa-solid fa-arrow-left"></i> Back</div>
+        <div class="confirm" id="confirm" onclick="done()">Confirm Order</div>
+       </div>
+    
+    </div>
+
+    <div class="recheck-order" id="recheck-order">
+      <h2>Recheck Order Details</h2>
+      <div class="order-summary">
+        <h3>Order Summary:</h3>
+        <ul>
+          <li><b>Product Name: </b><span id="product-name"></span></li>
+          <li><b>Total: </b> &nbsp; &nbsp;<span id="total"></span></li>
+        </ul>
+      </div>
+      <div class="addInstructions">
+        <h3 class="addinstruction">Add Instructions by click button</h3>
+        <input type="text" name="textarea"class="instructions" id="instructions" placeholder="Enter Instructions">
+        <div class="option">
+          <button id="nochilli" onclick="nochilli()">No Chilli</button>
+          <button id="chilli" onclick="chilli()">Extra Chilli</button>
+          <button id="crunchi" onclick="crunchi()">Crunchi</button>
+          <button id="checthup" onclick="checthup()">Extra Checthup</button>
+          <button id="hot" onclick="hot()">Hot</button>
+          <button id="boild" onclick="boild()">Boild</button>
+          <button id="child" onclick="child()">Child</button>
+        </div>
+      </div>
+      
+      <div class="payment-options">
+        <h3>Payment Options:</h3>
+        <div class="payment-method">
+          <input type="radio" id="cash-on-delivery" name="payment" checked onclick="removeQR()">
+          <label for="cash-on-delivery">Cash on Delivery</label>
+        </div>
+        <div class="payment-method">
+          <input type="radio" id="online-payment" name="payment" onclick="showQR()">
+          <label for="online-payment">Online Payment</label>
+          <img id="QR" class="QR" src="assets/images/WhatsApp Image 2024-08-02 at 14.53.02_3ca66a9f.jpg" alt="">
+        </div>
+      </div>
+      <button class="btn-confirm" onclick="confirmOrder()">Confirm Order</button>
+    </div>
+   
+
+    <div class="receipt" id="receipt">
+      <h1>Receipt</h1>
+      <hr>
+      <div class="sections" id="genralinfo">
+          <h2> FTF(kitchen)</h2>
+          <p id="date"></p>
+          <p>FTF-<span id="code"></span></p>
+          <p>FeelTheFood: 6218072009</p>    
+          <p id="otp">OTP: 8640 </p>
+      </div>        
+      <h2>Delivery </h2> 
+      <div class="sections boxess" class="customerinfo" id="customerinfo">
+          <p><b>Name : </b><span id="uname"> </span></p><br>
+          <p><b>Phone : </b><span id="phone"> </span></p><br>
+          <p><b>Address : </b><span id="location"> Yttam Nagar West Delhi NCR India</span></p> 
+      </div>
+      <div class="sections boxess" class="oerderinfo">
+          <table>
+              <tr>
+                  <th class="items">No.Item </th>
+                  <th class="special">Special Note </th>
+                  <th>Qty.</th>
+              </tr>
+              <tr class="rows" id="row">
+                  <td class="items" id="productname"></td>
+                  <td class="special" id="preperation"></td>
+                  <td class="qty" id="qty"></td>
+              </tr>
+              <tr class="rows" id="row1">
+                <td class="items" id="productname1"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty1"></td>
+              </tr>
+              <tr class="rows" id="row2">
+                <td class="items" id="productname2"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty2"></td>
+              </tr>
+              <tr class="rows" id="row3">
+                <td class="items" id="productname3"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty3"></td>
+              </tr>
+              <tr class="rows" id="row4">
+                <td class="items" id="productname4"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty4"></td>
+              </tr>
+              <tr class="rows" id="row5">
+                <td class="items" id="productname5"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty5"></td>
+              </tr>
+              <tr class="rows" id="row6">
+                <td class="items" id="productname6"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty6"></td>
+              </tr>
+              <tr class="rows" id="row7">
+                <td class="items" id="productname7"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty7"></td>
+              </tr>
+              <tr class="rows" id="row8">
+                <td class="items" id="productname8"></td>
+                <td class="special" id="preperation"></td>
+                <td class="qty" id="qty8"></td>
+              </tr>
+          </table>
+      </div>
+      <div class="bill" id="Bill">
+          <h3>TOTAL BILL: </h3><h3 id="tb"></h3>
+      </div>
+      <div class="sections boxess footer" id="note">
+          <p class="note">Customer note: don't cutlery, tissues and straws</p>
+          <h3>Payment Status: <span id="paymentmode">Cash on Delivery</span></h3>
+          <h3>Prepare By: <span id="date1"></span>&nbsp;<span id="time"></span></h3>
+      </div>
+      <button id="done"><i class="fa fa-solid fa-download" onclick="download()"></i></button>
+  </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</body>
+</html>
